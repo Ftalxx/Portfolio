@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Quantum Guitar">
+  <!-- Header -->
+  <header class="mb-12 max-w-4xl">
+    <h3 class="text-xl">
+      <div class="flex items-center gap-3">
+    <a
+      href="/projects/quantum-guitar"
+      class="text-cyan-300 hover:underline"
+    >
+      Quantum Guitar
+    </a>
+
+    <span
+      class="text-xs uppercase tracking-wider px-3 py-1 rounded
+             border border-amber-400 text-amber-400"
+    >
+      In Progress
+    </span>
+  </div>
+</h3>
+    <p class="text-gray-300 leading-relaxed">
+      Quantum Guitar is a wearable, sensor-driven musical interface that explores how
+      human motion, noise, and quantum-inspired probabilistic processes can interact
+      to generate expressive musical output. The project investigates whether
+      randomness can function as a creative parameter rather than a source of error.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-2 text-sm text-gray-400">
+      <span class="border border-cyan-400/30 rounded px-3 py-1">Wearable Sensors</span>
+      <span class="border border-cyan-400/30 rounded px-3 py-1">IMUs</span>
+      <span class="border border-cyan-400/30 rounded px-3 py-1">Time-of-Flight</span>
+      <span class="border border-cyan-400/30 rounded px-3 py-1">Python</span>
+      <span class="border border-cyan-400/30 rounded px-3 py-1">Qiskit</span>
+    </div>
+
+    <a
+      href="https://github.com/Ftalxx/Quantum_Guitar"
+      target="_blank"
+      class="inline-block mt-6 border border-cyan-400 text-cyan-400 px-5 py-2 rounded hover:bg-cyan-400 hover:text-black transition"
+    >
+      View source code →
+    </a>
+  </header>
+
+  <!-- Problem -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-3">Problem Statement</h2>
+    <p class="text-gray-300 leading-relaxed">
+      Most digital musical interfaces aim to eliminate noise and variability to achieve
+      predictable output. In contrast, Quantum Guitar asks whether structured noise and
+      probabilistic behavior can be intentionally integrated into a musical control system
+      to expand expressive range without sacrificing performer agency.
+    </p>
+  </section>
+
+  <!-- System Overview -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-4">System Overview</h2>
+
+    <ul class="list-disc pl-6 text-gray-300 space-y-3">
+      <li>
+        <span class="text-gray-200">Wearable sensor network:</span>
+        Multiple IMUs and time-of-flight sensors capture finger position, orientation,
+        and strumming motion in free space.
+      </li>
+      <li>
+        <span class="text-gray-200">Motion processing pipeline:</span>
+        Raw sensor data is streamed to Python for filtering, calibration, and feature
+        extraction in real time.
+      </li>
+      <li>
+        <span class="text-gray-200">Quantum-inspired mapping:</span>
+        Extracted motion features bias parameters of quantum circuits simulated via
+        Qiskit, producing probabilistic musical outputs.
+      </li>
+      <li>
+        <span class="text-gray-200">Generative music layer:</span>
+        Measurement outcomes are mapped to notes, chords, and effects, balancing
+        performer intent with stochastic variation.
+      </li>
+    </ul>
+  </section>
+
+  <!-- My Role -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-3">My Role</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I designed and implemented the hardware architecture, sensor integration,
+      data acquisition pipeline, and quantum-inspired control logic. The project is
+      developed as an independent research exploration into human–quantum
+      co-creative systems.
+    </p>
+  </section>
+
+  <!-- Research Focus -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-3">Research Focus</h2>
+    <p class="text-gray-300 leading-relaxed">
+      The core research question examines how far probabilistic systems can influence
+      generative music before they overwhelm human control. By treating noise as a
+      structured signal rather than an error term, the project explores new mappings
+      between embodied motion and stochastic computation.
+    </p>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-3">Outcomes</h2>
+    <p class="text-gray-300 leading-relaxed">
+      Quantum Guitar demonstrates a hybrid control paradigm that blends deterministic
+      gesture sensing with probabilistic computation. The system serves as a platform
+      for studying creative co-authorship between human performers and algorithmic
+      randomness.
+    </p>
+  </section>
+
+  <!-- Bottom navigation bar -->
+<div
+  class="fixed bottom-0 left-0 w-full z-50
+         border-t border-cyan-400/20
+         bg-black/70 backdrop-blur"
+>
+  <div class="max-w-6xl mx-auto px-6 py-3">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-2 text-cyan-400
+             opacity-80 hover:opacity-100
+             hover:text-cyan-300 transition group"
+    >
+      <svg
+        class="w-4 h-4 transform transition-transform group-hover:-translate-x-1"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 19l-7-7 7-7"
+        />
+      </svg>
+
+      <span class="text-sm uppercase tracking-wider">
+        Projects
+      </span>
+    </a>
+  </div>
+</div>
+
+</BaseLayout>

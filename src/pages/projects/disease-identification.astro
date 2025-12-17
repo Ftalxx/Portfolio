@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Harvest Shield">
+  <!-- Header -->
+  <header class="mb-12 max-w-4xl">
+    <div class="flex items-center gap-3 mb-4">
+        <h1 class="text-4xl text-cyan-400">Harvest Shield</h1>
+        <span class="text-xs uppercase tracking-wider px-3 py-1 rounded
+               border border-emerald-400 text-emerald-400">
+            Completed
+        </span>
+    </div>
+
+    <p class="text-gray-300 leading-relaxed">
+      Harvest Shield is a machine learning–driven agricultural platform for identifying
+      crop diseases and pest infestations and recommending mitigation strategies.
+      The project combines computer vision, large-scale text data, and model-driven
+      decision support to assist agricultural monitoring and intervention.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-2 text-sm text-gray-400">
+      <span class="border border-cyan-400/30 rounded px-3 py-1">CNNs</span>
+      <span class="border border-cyan-400/30 rounded px-3 py-1">VGG16</span>
+      <span class="border border-cyan-400/30 rounded px-3 py-1">TinyBERT</span>
+      <span class="border border-cyan-400/30 rounded px-3 py-1">Data Scraping</span>
+      <span class="border border-cyan-400/30 rounded px-3 py-1">ML Pipelines</span>
+    </div>
+
+    <a
+      href="https://github.com/Ftalxx/Harvest_Shield"
+      target="_blank"
+      class="inline-block mt-6 border border-cyan-400 text-cyan-400 px-5 py-2 rounded hover:bg-cyan-400 hover:text-black transition"
+    >
+      View source code →
+    </a>
+  </header>
+
+  <!-- Problem -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-3">Problem Statement</h2>
+    <p class="text-gray-300 leading-relaxed">
+      Early identification of crop diseases and pest activity is critical for preventing
+      yield loss, yet existing tools often require expert interpretation or lack integrated
+      remediation guidance. Harvest Shield addresses this gap by unifying classification,
+      contextual analysis, and actionable recommendations within a single system.
+    </p>
+  </section>
+
+  <!-- System Overview -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-4">System Overview</h2>
+
+    <ul class="list-disc pl-6 text-gray-300 space-y-3">
+      <li>
+        <span class="text-gray-200">Image-based classification:</span>
+        CNN and VGG16 models classify plant diseases and pests from captured images.
+      </li>
+      <li>
+        <span class="text-gray-200">Text-based mediation model:</span>
+        A TinyBERT-based model processes scraped agricultural resources to support
+        remediation and prevention recommendations.
+      </li>
+      <li>
+        <span class="text-gray-200">Dataset construction:</span>
+        Approximately 160,000 rows of functional text data compiled from IPM resources
+        and Wikipedia.
+      </li>
+      <li>
+        <span class="text-gray-200">Geospatial interface:</span>
+        Mapping components associate crop, pest, and disease data with land regions
+        for visualization and tracking.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Your Role -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-3">My Role</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I developed the mediation model responsible for interpreting classification outputs
+      and linking them to remediation and prevention strategies. This included dataset
+      scraping and preprocessing, model integration, and evaluation of response quality.
+    </p>
+  </section>
+
+  <!-- Team -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-4">Team & Mentorship</h2>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="border border-cyan-400/30 rounded p-4">
+        <p class="text-gray-200 font-semibold mb-2">Contributors</p>
+        <ul class="text-gray-300 space-y-1 text-sm">
+          <li>Veronica Segovia — Mediation Model</li>
+          <li>Nicolas Vasilescu — Plant Classification</li>
+          <li>Mariya Mushtaq — Pest Classification</li>
+          <li>Mahitha Thippireddy — Application Framework</li>
+          <li>Delight Nyanhete — Market Research</li>
+        </ul>
+      </div>
+
+      <div class="border border-cyan-400/30 rounded p-4">
+        <p class="text-gray-200 font-semibold mb-2">Mentors</p>
+        <ul class="text-gray-300 space-y-1 text-sm">
+          <li>Arezoo Bybordi</li>
+          <li>Jake Byford</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="mb-12 max-w-4xl">
+    <h2 class="text-2xl text-cyan-300 mb-3">Outcomes</h2>
+    <p class="text-gray-300 leading-relaxed">
+      Harvest Shield demonstrates how heterogeneous ML models and large-scale
+      scraped datasets can be combined into a cohesive decision-support system.
+      The project emphasizes system integration, data quality, and practical usability
+      over isolated model performance.
+    </p>
+  </section>
+
+  <!-- Bottom navigation bar -->
+<div
+  class="fixed bottom-0 left-0 w-full z-50
+         border-t border-cyan-400/20
+         bg-black/70 backdrop-blur"
+>
+  <div class="max-w-6xl mx-auto px-6 py-3">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-2 text-cyan-400
+             hover:text-cyan-300 transition group"
+    >
+      <svg
+        class="w-4 h-4 transform transition-transform group-hover:-translate-x-1"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 19l-7-7 7-7"
+        />
+      </svg>
+
+      <span class="text-sm uppercase tracking-wider">
+        Projects
+      </span>
+    </a>
+  </div>
+</div>
+
+
+<!-- Bottom navigation bar -->
+<div
+  class="fixed bottom-0 left-0 w-full z-50
+         border-t border-cyan-400/20
+         bg-black/70 backdrop-blur"
+>
+  <div class="max-w-6xl mx-auto px-6 py-3">
+    <a
+      href="/projects"
+      class="inline-flex items-center gap-2 text-cyan-400
+             opacity-80 hover:opacity-100
+             hover:text-cyan-300 transition group"
+    >
+      <svg
+        class="w-4 h-4 transform transition-transform group-hover:-translate-x-1"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15 19l-7-7 7-7"
+        />
+      </svg>
+
+      <span class="text-sm uppercase tracking-wider">
+        Projects
+      </span>
+    </a>
+  </div>
+</div>
+
+
+
+</BaseLayout>

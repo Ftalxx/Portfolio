@@ -1,0 +1,49 @@
+fix 
+
+---
+import "../styles/global.css";
+import NavBar from "../components/NavBar.astro";
+const { title = "Veronica Segovia" } = Astro.props;
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={`${import.meta.env.BASE_URL}head.svg`}
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-[#0b0d10] text-[#e6e6e6] font-mono">
+    <!-- subtle cyber grid -->
+    <div
+      class="fixed inset-0 pointer-events-none opacity-[0.04]
+      bg-[linear-gradient(#7dd3fc_1px,transparent_1px),linear-gradient(90deg,#7dd3fc_1px,transparent_1px)]
+      bg-size-[48px_48px]"
+    ></div>
+
+
+    <main
+  class="relative z-10 w-full py-10"
+  style="padding-left: clamp(1rem, 2vw, 2rem);
+         padding-right: clamp(1rem, 2vw, 2rem);"
+>
+
+      <NavBar />
+      <slot />
+    </main>
+  </body>
+</html>

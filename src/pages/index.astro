@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Veronica Segovia | Computer Science">
+  <section class="space-y-6">
+    <h1 class="text-5xl text-cyan-400 drop-shadow-[0_0_12px_rgba(0,240,255,0.7)]">
+      Veronica Segovia
+    </h1>
+
+    <p class="text-xl text-gray-300 max-w-2xl">
+      Computer Science student exploring quantum-inspired systems,
+      human-machine interaction, and experimental hardware interfaces.
+    </p>
+
+    <div class="flex gap-6 pt-6">
+      <a
+        href={`${import.meta.env.BASE_URL}projects`}
+        class="text-cyan-400 hover:text-cyan-300 transition"
+      >
+        View Projects →
+      </a>
+    </div>
+  </section>
+</BaseLayout>

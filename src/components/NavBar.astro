@@ -1,0 +1,87 @@
+---
+const base = import.meta.env.BASE_URL ?? "";
+
+const rawPath = Astro.url.pathname;
+const normalizedBase = base.endsWith("/") ? base.slice(0, -1) : base;
+
+let currentPath = rawPath.startsWith(normalizedBase)
+  ? rawPath.slice(normalizedBase.length)
+  : rawPath;
+
+if (!currentPath.startsWith("/")) {
+  currentPath = "/" + currentPath;
+}
+
+if (currentPath === "") currentPath = "/";
+
+// Treat subpages as active too
+const isActive = (path: string) =>
+  path === "/"
+    ? currentPath === "/"
+    : currentPath === path || currentPath.startsWith(path + "/");
+
+const linkClass = (path: string) =>
+  isActive(path)
+    ? "text-cyan-400 text-lg font-semibold hover:text-cyan-300 transition"
+    : "nav-link";
+---
+
+<nav class="flex items-center h-12 mb-16 relative overflow-visible flex-wrap gap-y-4">
+  <!-- ICON BOX -->
+  <div
+    class="relative -translate-y-1/8
+           flex items-center justify-center
+           h-16 w-16
+           rounded-full
+           border border-[#27272a]
+           shadow-[0_0_30px_rgba(125,211,252,0.15)]
+           bg-black/40"
+  >
+    <img
+      src={`${import.meta.env.BASE_URL}icon.svg`}
+      alt="icon"
+      class="h-20 aspect-square
+            scale-150
+            brightness-100 contrast-130
+            opacity-100 transition"
+    />
+  </div>
+
+  <!-- LINKS -->
+  <div class="ml-auto flex items-center gap-8">
+    <a href={`${base}`} class={linkClass("/")}>Home</a>
+    <a href={`${base}projects`} class={linkClass("/projects")}>Projects</a>
+    <a href={`${base}about`} class={linkClass("/about")}>About</a>
+    <a href={`${base}research`} class={linkClass("/research")}>Research</a>
+    <a href={`${base}contact`} class={linkClass("/contact")}>Contact</a>
+    <a href={`${base}extras`} class={linkClass("/extras")}>Extras</a>
+  </div>
+</nav>
+
+
+<style>
+  .nav-link {
+    color: #9ca3af;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 1px;
+    background: #00f0ff;
+    transition: width 0.2s ease;
+  }
+
+  .nav-link:hover {
+    color: #e5e7eb;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+</style>

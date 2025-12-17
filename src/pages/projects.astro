@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Projects">
+  <h2 class="text-3xl text-cyan-400 mb-8">Projects</h2>
+  <h3 class="text-md text-gray-300 mb-6">
+    A selection of my recent work in experimental hardware,
+    machine learning, and systems programming. Click on name to learn more.
+  </h3>
+  
+  <div class="space-y-8">
+
+    <div class="border border-cyan-400/30 p-6 rounded">
+      
+      <h3 class="text-xl">
+        
+        
+        <div class="flex items-center gap-3 mb-4">
+          <a
+            href={`${import.meta.env.BASE_URL}projects/quantum-guitar`}
+            class="text-cyan-300 hover:underline"
+          >
+            Quantum Guitar
+          </a>
+
+          <span
+            class="text-xs uppercase tracking-wider px-3 py-1 rounded
+                  border border-amber-400 text-amber-400"
+          >
+            In Progress
+          </span>
+        </div>
+
+      </h3>
+    
+
+      <p class="text-gray-300 mt-2">
+        A wearable, sensor-based instrument exploring motion, noise,
+        and quantum-inspired probabilistic music generation.
+      </p>
+      <p class="text-sm text-gray-400 mt-2">
+        ESP32 • IMUs • ToF Sensors • Python • Qiskit
+      </p>
+    </div>
+
+
+    <div class="border border-cyan-400/30 p-6 rounded">
+      <div class="flex items-center gap-3 mb-4">
+        <h3 class="text-xl flex items-center gap-3">
+          <a
+            href={`${import.meta.env.BASE_URL}projects/disease-identification`}
+            class="text-cyan-300 hover:underline"
+          >
+            Harvest Shield
+          </a>
+
+          <span
+            class="text-xs uppercase tracking-wider px-3 py-1 rounded
+                  border border-emerald-400 text-emerald-400"
+          >
+            Completed
+          </span>
+        </h3>
+      </div>
+
+      <p class="text-gray-300 mt-2">
+        Machine learning models for identifying plant diseases
+        and recommending treatments to support sustainable agriculture.
+      </p>
+
+      <p class="text-sm text-gray-400 mt-2">
+        CNNs • VGG16 • TinyBERT • Data Scraping • ML Pipelines
+      </p>
+    </div>
+
+
+    <div class="border border-cyan-400/30 p-6 rounded">
+      <h3 class="text-xl text-cyan-300">Systems & Low-Level Work</h3>
+      <p class="text-gray-300 mt-2">
+        C, Java, and systems programming projects emphasizing memory,
+        performance, and correctness.
+      </p>
+    </div>
+
+  </div>
+</BaseLayout>
