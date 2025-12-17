@@ -26,7 +26,7 @@ const linkClass = (path: string) =>
     : "nav-link";
 ---
 
-<nav class="flex items-center h-16 mb-16 relative overflow-visible flex-wrap gap-y-4">
+<nav class="flex items-center h-10 mb-16 relative overflow-visible flex-wrap gap-y-4">
   <!-- ICON BOX -->
   <div
     class="relative -translate-y-1/8
@@ -73,7 +73,7 @@ const linkClass = (path: string) =>
 <!-- MOBILE MENU -->
 <div
   id="mobileMenu"
-  class="md:hidden hidden bg-black/90 border-t border-cyan-400/30"
+  class="hidden md:hidden bg-black/90 border-t border-cyan-400/30 pb-4 mb-6"
 >
   <div class="flex flex-col p-6 space-y-4">
     <a href={`${base}`} class={linkClass("/")}>Home</a>
