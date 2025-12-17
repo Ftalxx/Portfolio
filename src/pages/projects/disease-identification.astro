@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL ?? "";
 ---
 
 <BaseLayout title="Harvest Shield">
@@ -130,41 +131,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 >
   <div class="max-w-6xl mx-auto px-6 py-3">
     <a
-      href="/projects"
-      class="inline-flex items-center gap-2 text-cyan-400
-             hover:text-cyan-300 transition group"
-    >
-      <svg
-        class="w-4 h-4 transform transition-transform group-hover:-translate-x-1"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15 19l-7-7 7-7"
-        />
-      </svg>
-
-      <span class="text-sm uppercase tracking-wider">
-        Projects
-      </span>
-    </a>
-  </div>
-</div>
-
-
-<!-- Bottom navigation bar -->
-<div
-  class="fixed bottom-0 left-0 w-full z-50
-         border-t border-cyan-400/20
-         bg-black/70 backdrop-blur"
->
-  <div class="max-w-6xl mx-auto px-6 py-3">
-    <a
-      href="/projects"
+      href={`${base}projects`}
       class="inline-flex items-center gap-2 text-cyan-400
              opacity-80 hover:opacity-100
              hover:text-cyan-300 transition group"
@@ -189,7 +156,5 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </a>
   </div>
 </div>
-
-
 
 </BaseLayout>
