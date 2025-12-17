@@ -5,20 +5,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="About Me">
   <h2 class="text-3xl text-cyan-400 mb-8">About Me</h2>
 
+  <div class="mx-auto max-w-[clamp(40rem,80vw,72rem)] grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+  <!-- TEXT -->
   <div
-  class="mx-auto
-         text-[#a1a1aa] leading-relaxed
-         columns-1 md:columns-2
-         gap-12
-         [column-rule:1px_solid_rgba(125,211,252,0.25)]
-         max-w-[clamp(40rem,80vw,72rem)]"
->
+    class="text-[#a1a1aa] leading-relaxed
+           columns-1 md:columns-2
+           gap-12
+           [column-rule:1px_solid_rgba(125,211,252,0.25)]"
+  >
   <p>
     My name is Veronica Segovia. I was born in Caracas, Venezuela and am currently pursuing my studies 
     in the United States as a U.S. citizen. As a first-generation college student, woman, and member of an
     underrepresented group in STEM, my background has shaped how I approach science.
   
-    <br></br>
+    <br />
   </p>
 
   <p>
@@ -26,7 +27,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     I tend to think nonlinearly, explore unconventional connections, and sustain deep focus when working
     on research questions that interest me.
   
-    <br></br>
+    <br />
   </p>
 
   <p>
@@ -34,14 +35,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     programming and problem-solving, fueled by reading research papers and books such as
     <em>Quantum Computation and Quantum Information</em>.
   
-    <br></br>
+    <br />
   </p>
 
   <p>
     I aim to contribute work that is both rigorous and inclusive, and to help broaden participation
     in fields where access and representation remain uneven.
   
-    <br></br>
+    <br />
   </p>
 
   <p>
@@ -49,23 +50,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     like Elden Ring, Persona 5, and the Legend of Zelda series. To help with my fitness and focus I also like
     weightlifting and cycling.
     
-    <br></br>
+    <br />
   </p>
 
   <p>
     Thank you for visiting my site!
-    <br></br>
+    <br />
     — Veronica
   </p>
 </div>
 
 
-  <div class="mt-10 flex justify-center">
+  <!-- IMAGE -->
+  <div class="flex justify-center items-start">
     <img
       src={`${import.meta.env.BASE_URL}images/veronica.png`}
       alt="Portrait of Veronica Segovia"
       class="w-80 max-w-full rounded-xl border border-[#27272a]
-            shadow-[0_0_30px_rgba(125,211,252,0.15)]"
+             shadow-[0_0_30px_rgba(125,211,252,0.15)]"
     />
   </div>
+
 </BaseLayout>
